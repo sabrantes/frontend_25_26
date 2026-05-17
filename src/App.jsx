@@ -3,8 +3,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 import EmployeeList from './view/EmployeeList';
-//import EmployeeAdd from './view/EmployeeAdd';
-//import EmployeeEdit from './view/EmployeeEdit';
+import EmployeeAdd from './view/EmployeeAdd';
+import EmployeeEdit from './view/EmployeeEdit';
 
 function App() {
   return (
@@ -28,6 +28,8 @@ function App() {
           <div className="row">
             <Routes>
               <Route path="/employee/" element={<EmployeeList />} />
+              <Route path="/employee/add" element={<EmployeeAdd />} />
+              <Route path="/employee/edit/:employeeId" element={<EmployeeEdit />} />
             </Routes>
           </div>
         </div>
